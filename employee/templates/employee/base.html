@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Register</title>
+    <link rel='stylesheet' href='{% static 'css/bootstrap.css' %}' />
+  </head>
+  <body>
+
+    <div class="jumbotron">
+      <h1 class="display-4 text-center">Employee</h1>
+      <p class="lead text-center">Employee CRUD Operations Using Django</p>
+      <hr class="my-4">
+      {% block content %}
+    
+      {% endblock content %}  
+    </div>
+    
+  </body>
+</html>

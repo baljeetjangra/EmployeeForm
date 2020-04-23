@@ -1,0 +1,30 @@
+{% extends 'employee/base.html' %} {% block content %}
+<!-- form -->
+{% load crispy_forms_tags %}
+<form action="" method="POST">
+  {% csrf_token %}
+  <div class="row">
+    <div class="col-md-6">
+      {{form.firstname|as_crispy_field}}
+    </div>
+    <div class="col-md-6">
+      {{form.lastname|as_crispy_field}}
+    </div>
+  </div>
+  <div>
+    {{form.mobile|as_crispy_field}}
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      {{form.emp_code|as_crispy_field}}
+    </div>
+    <div class="col-md-4">
+      {{form.position|as_crispy_field}}
+    </div>
+  </div>
+  <!-- {{form|crispy}} -->
+  <button class="btn btn-success" type="submit">Submit</button>
+  <button class="btn btn-dark" type="reset">Reset</button>
+</form>
+
+{% endblock content %}
